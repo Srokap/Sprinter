@@ -33,10 +33,10 @@
 # $Id$
 
 TARGET = $(notdir $(CURDIR))
-INSTALL_DIR = ../../arduino22/arduino-0022/
+INSTALL_DIR = ../../../arduino-1.0.1/
 UPLOAD_RATE = 38400
 AVRDUDE_PROGRAMMER = stk500v1
-PORT = /dev/ttyUSB0
+PORT = COM6
 MCU = atmega2560
 #For "old" Arduino Mega
 #MCU = atmega1280

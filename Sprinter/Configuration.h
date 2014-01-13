@@ -32,7 +32,9 @@
 
 //// Calibration variables
 // X, Y, Z, E steps per unit - Metric Prusa Mendel with Wade extruder:
-#define _AXIS_STEP_PER_UNIT {80, 80, 3200/1.25,700}
+//#define _AXIS_STEP_PER_UNIT {80, 80, 3200/1.25,700}
+//wade axtruder with ratio of 43:13
+#define _AXIS_STEP_PER_UNIT {80, 80, 3200/1.25,483}
 // Metric Prusa Mendel with Makergear geared stepper extruder:
 //#define _AXIS_STEP_PER_UNIT {80,80,3200/1.25,1380}
 // MakerGear Hybrid Prusa Mendel:
@@ -71,11 +73,11 @@ const bool Z_ENDSTOP_INVERT = false;
 // M502 - reverts to the default "factory settings". You still need to store them in EEPROM afterwards if you want to.
 // M503 - Print settings
 // define this to enable eeprom support
-//#define USE_EEPROM_SETTINGS
+#define USE_EEPROM_SETTINGS
 
 // to disable EEPROM Serial responses and decrease program space by ~1000 byte: comment this out:
 // please keep turned on if you can.
-//#define PRINT_EEPROM_SETTING
+#define PRINT_EEPROM_SETTING
 
 //-----------------------------------------------------------------------
 //// ARC Function (G2/G3 Command)
@@ -139,7 +141,7 @@ const bool max_software_endstops = true; //If true, axis won't move to coordinat
 //-----------------------------------------------------------------------
 //Max Length for Prusa Mendel, check the ways of your axis and set this Values
 //-----------------------------------------------------------------------
-const int X_MAX_LENGTH = 200;
+const int X_MAX_LENGTH = 190;
 const int Y_MAX_LENGTH = 200;
 const int Z_MAX_LENGTH = 100;
 
@@ -212,8 +214,8 @@ const int dropsegments=5; //everything with less than this number of steps will 
 //-----------------------------------------------------------------------
 // This may be useful if you have multiple machines and wish to identify them by using the M115 command. 
 // By default we set it to zeros.
-#define _DEF_CHAR_UUID "00000000-0000-0000-0000-000000000000"
-
+//#define _DEF_CHAR_UUID "00000000-0000-0000-0000-000000000000"
+#define _DEF_CHAR_UUID "c208cc40-7bf4-11e3-baa7-0800200c9a66"
 
 
 //-----------------------------------------------------------------------
